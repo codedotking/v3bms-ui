@@ -103,6 +103,7 @@
 				depts: [],
 				deptsProps: {
 					value: "id",
+					label: "name",
 					checkStrictly: true
 				}
 			}
@@ -120,11 +121,11 @@
 			},
 			//加载树数据
 			async getGroup(){
-				var res = await this.$API.system.role.list.get();
+				var res = await this.$API.role.list.get();
 				this.groups = res.data.rows;
 			},
 			async getDept(){
-				var res = await this.$API.system.dept.list.get();
+				var res = await this.$API.dept.list.get();
 				this.depts = res.data;
 			},
 			//表单提交方法
@@ -132,7 +133,7 @@
 				this.$refs.dialogForm.validate(async (valid) => {
 					if (valid) {
 						this.isSaveing = true;
-						var res = await this.$API.demo.post.post(this.form);
+						var res = await this.$API.post.post(this.form);
 						this.isSaveing = false;
 						if(res.code == 200){
 							this.$emit('success', this.form, this.mode)

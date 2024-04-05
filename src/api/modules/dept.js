@@ -2,7 +2,7 @@ import config from "@/config"
 import http from "@/utils/request"
 
 
-const API = `${config.API_URL}/sys/menu`
+const API = `${config.API_URL}/sys/dept`
 
 export default {
 	async add(data) {
@@ -11,8 +11,10 @@ export default {
 	async update(data) {
 		return await http.put(API, data);
 	},
-	async batchDelete(data){
-		return await http.delete(API, data);
+	async batchDelete(ids) {
+		return await http.delete(API, {
+			ids
+		});
 	},
 	ver: {
 		url: `${config.API_URL}/demo/ver`,
@@ -22,7 +24,7 @@ export default {
 		}
 	},
 	post: {
-		url: `${config.API_URL}/demo/post`,
+		url: `${API}/list`,
 		name: "分页列表",
 		post: async function (data) {
 			return await http.post(this.url, data, {
@@ -40,7 +42,7 @@ export default {
 		}
 	},
 	list: {
-		url: `${config.API_URL}/demo/list`,
+		url: `${API}/list`,
 		name: "数据列表",
 		get: async function (params) {
 			return await http.get(this.url, params);
