@@ -6,7 +6,7 @@ import topLevelAwait from 'vite-plugin-top-level-await';
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd());
   return defineConfig({
-    base: '',
+    base: './',
     build: {
       sourcemap: false
     },
