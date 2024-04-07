@@ -15,8 +15,8 @@
 				<el-table-column label="邮箱" prop="email" width="250"></el-table-column>
 				<el-table-column label="状态" prop="boolean" width="60">
 					<template #default="scope">
-						<sc-status-indicator v-if="scope.row.boolean" type="success"></sc-status-indicator>
-						<sc-status-indicator v-if="!scope.row.boolean" pulse type="danger"></sc-status-indicator>
+						<hl-status-indicator v-if="scope.row.boolean" type="success"></hl-status-indicator>
+						<hl-status-indicator v-if="!scope.row.boolean" pulse type="danger"></hl-status-indicator>
 					</template>
 				</el-table-column>
 				<el-table-column label="评分" prop="num" width="150"></el-table-column>

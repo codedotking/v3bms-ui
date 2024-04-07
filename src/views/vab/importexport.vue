@@ -3,13 +3,13 @@
 		<el-row :gutter="15">
 			<el-col :lg="12">
 				<el-card shadow="never" header="导入(使用mock,有50%几率导入失败)">
-					<sc-file-import :apiObj="$API.common.importFile" templateUrl="http://www.HUALAadmin/file.xlsx" @success="success"></sc-file-import>
-					<sc-file-import :apiObj="$API.common.importFile" :data="{otherData:'demo'}" templateUrl="http://www.HUALAadmin/file.xlsx" accept=".xls, .xlsx" :maxSize="30" tip="请上传小于或等于 30M 的 .xls, .xlsx 格式文件(自定义TIP)" @success="success">
+					<hl-file-import :apiObj="$API.common.importFile" templateUrl="http://www.HUALAadmin/file.xlsx" @success="success"></hl-file-import>
+					<hl-file-import :apiObj="$API.common.importFile" :data="{otherData:'demo'}" templateUrl="http://www.HUALAadmin/file.xlsx" accept=".xls, .xlsx" :maxSize="30" tip="请上传小于或等于 30M 的 .xls, .xlsx 格式文件(自定义TIP)" @success="success">
 						<template #default="{open}">
 							<el-button type="primary" icon="sc-icon-upload" @click="open">导入(全配置)</el-button>
 						</template>
 						<template #uploader>
-							<el-icon class="el-icon--upload"><sc-icon-file-excel /></el-icon>
+							<el-icon class="el-icon--upload"><hl-icon-file-excel /></el-icon>
 							<div class="el-upload__text">
 								将文件拖到此处或 <em>点击选择文件上传</em>
 							</div>
@@ -22,7 +22,7 @@
 								<el-switch v-model="formData.skipError" />
 							</el-form-item>
 						</template>
-					</sc-file-import>
+					</hl-file-import>
 					<el-descriptions :column="1" border size="small" style="margin-top: 15px;">
 						<el-descriptions-item label="apiObj" :width="200">Object 文件上传接口对象</el-descriptions-item>
 						<el-descriptions-item label="data">Object 上传时附带的额外参数</el-descriptions-item>
@@ -39,13 +39,13 @@
 			</el-col>
 			<el-col :lg="12">
 				<el-card shadow="never" header="导出">
-					<sc-file-export :apiObj="$API.common.exportFile"></sc-file-export>
-					<sc-file-export :apiObj="$API.common.exportFile" fileName="人员列表(异步)" async>
+					<hl-file-export :apiObj="$API.common.exportFile"></hl-file-export>
+					<hl-file-export :apiObj="$API.common.exportFile" fileName="人员列表(异步)" async>
 						<template #default="{open}">
 							<el-button type="primary" icon="sc-icon-download" @click="open">导出(异步)</el-button>
 						</template>
-					</sc-file-export>
-					<sc-file-export :apiObj="$API.common.exportFile" blob fileName="人员列表" :data="{otherData:'demo'}" showData :column="column" :fileTypes="['xlsx','docx','pdf']">
+					</hl-file-export>
+					<hl-file-export :apiObj="$API.common.exportFile" blob fileName="人员列表" :data="{otherData:'demo'}" showData :column="column" :fileTypes="['xlsx','docx','pdf']">
 						<template #default="{open}">
 							<el-button type="primary" icon="sc-icon-download" @click="open">导出(blob文件流)</el-button>
 						</template>
@@ -60,7 +60,7 @@
 								</el-select>
 							</el-form-item>
 						</template>
-					</sc-file-export>
+					</hl-file-export>
 					<el-descriptions :column="1" border size="small" style="margin-top: 15px;">
 						<el-descriptions-item label="apiObj" :width="200">Object 文件导出接口对象，通过apiObj.url请求文件</el-descriptions-item>
 						<el-descriptions-item label="data">Object 上传时附带的额外参数(可为数据表格的过滤项)</el-descriptions-item>
@@ -99,8 +99,8 @@
 </template>
 
 <script>
-	import scFileImport from '@/components/scFileImport'
-	import scFileExport from '@/components/scFileExport'
+	import scFileImport from '@/components/hlFileImport'
+	import scFileExport from '@/components/hlFileExport'
 
 	export default {
 		name: 'importexport',

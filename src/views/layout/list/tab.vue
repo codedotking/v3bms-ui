@@ -10,7 +10,7 @@
 			</el-tabs>
 		</el-header>
 		<el-header style="height: auto;">
-			<sc-select-filter :data="filterData" :label-width="80" @on-change="filterChange"></sc-select-filter>
+			<hl-select-filter :data="filterData" :label-width="80" @on-change="filterChange"></hl-select-filter>
 		</el-header>
 		<el-header>
 			<div class="left-panel">
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-	import scSelectFilter from '@/components/scSelectFilter'
+	import scSelectFilter from '@/components/hlSelectFilter'
 
 	export default {
 		name: 'listTab',

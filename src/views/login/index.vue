@@ -7,7 +7,7 @@
 				<p>{{ $t('login.describe') }}</p>
 				<div>
 					<span>
-						<el-icon><sc-icon-vue /></el-icon>
+						<el-icon><hl-icon-vue /></el-icon>
 					</span>
 					<span>
 						<el-icon class="add"><el-icon-plus /></el-icon>
@@ -62,7 +62,7 @@
 	</div>
 	<el-dialog v-model="showWechatLogin" :title="$t('login.wechatLoginTitle')" :width="400" destroy-on-close>
 		<div class="qrCodeLogin">
-			<sc-qr-code class="qrCode" :text="WechatLoginCode" :size="200"></sc-qr-code>
+			<hl-qr-code class="qrCode" :text="WechatLoginCode" :size="200"></hl-qr-code>
 			<p class="msg">{{$tc('login.wechatLoginMsg', 1)}}<br/>{{$tc('login.wechatLoginMsg', 2)}}</p>
 			<div class="qrCodeLogin-result" v-if="isWechatLoginResult">
 				<el-result icon="success" :title="$tc('login.wechatLoginResult', 1)" :sub-title="$tc('login.wechatLoginResult', 2)"></el-result>

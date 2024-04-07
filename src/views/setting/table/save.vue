@@ -4,7 +4,7 @@
 			<el-main style="padding:0 20px 20px 20px">
 
 				<el-form ref="dialogForm" :model="form" :rules="rules" label-width="100px" label-position="top">
-					<sc-title title="基础"></sc-title>
+					<hl-title title="基础"></hl-title>
 					<el-row :gutter="20">
 						<el-col :span="16">
 							<el-form-item label="表格名称" prop="name">
@@ -21,9 +21,9 @@
 						<el-checkbox v-model="form.remoteSort" label="远程排序"></el-checkbox>
 						<el-checkbox v-model="form.remoteFilter" label="远程过滤"></el-checkbox>
 					</el-form-item>
-					<sc-title title="表格列"></sc-title>
+					<hl-title title="表格列"></hl-title>
 					<el-form-item prop="column">
-						<sc-form-table v-model="form.column" :addTemplate="addTemplate" drag-sort placeholder="暂无数据">
+						<hl-form-table v-model="form.column" :addTemplate="addTemplate" drag-sort placeholder="暂无数据">
 							<el-table-column prop="label" label="名称">
 								<template #default="scope">
 									<el-input v-model="scope.row.label" placeholder="请输入名称"></el-input>
@@ -59,7 +59,7 @@
 									<el-checkbox v-model="scope.row.fixed"></el-checkbox>
 								</template>
 							</el-table-column>
-						</sc-form-table>
+						</hl-form-table>
 					</el-form-item>
 				</el-form>
 			</el-main>
@@ -71,7 +71,7 @@
 
 		<el-drawer title="过滤项配置" v-model="setFiltersVisible" :size="500" destroy-on-close>
 			<el-main style="padding:0 20px 20px 20px">
-				<sc-form-table v-model="selectionFilters" :addTemplate="filtersAddTemplate" drag-sort placeholder="暂无数据">
+				<hl-form-table v-model="selectionFilters" :addTemplate="filtersAddTemplate" drag-sort placeholder="暂无数据">
 					<el-table-column prop="text" label="名称">
 						<template #default="scope">
 							<el-input v-model="scope.row.text" placeholder="请输入名称"></el-input>
@@ -82,7 +82,7 @@
 							<el-input v-model="scope.row.value" placeholder="请输入值"></el-input>
 						</template>
 					</el-table-column>
-				</sc-form-table>
+				</hl-form-table>
 			</el-main>
 		</el-drawer>
 

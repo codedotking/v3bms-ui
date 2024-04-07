@@ -4,12 +4,12 @@
 		<el-row :gutter="15">
 			<el-col :lg="12">
 				<el-card shadow="never" header="默认">
-					<sc-cron v-model="v1" placeholder="请输入Cron定时规则" clearable></sc-cron>
+					<hl-cron v-model="v1" placeholder="请输入Cron定时规则" clearable></hl-cron>
 				</el-card>
 			</el-col>
 			<el-col :lg="12">
 				<el-card shadow="never" header="快捷扩展">
-					<sc-cron v-model="v2" placeholder="请输入Cron定时规则" clearable :shortcuts="shortcuts"></sc-cron>
+					<hl-cron v-model="v2" placeholder="请输入Cron定时规则" clearable :shortcuts="shortcuts"></hl-cron>
 				</el-card>
 			</el-col>
 		</el-row>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-	import scCron from '@/components/scCron'
+	import scCron from '@/components/hlCron'
 
 	export default {
 		name: 'cron',

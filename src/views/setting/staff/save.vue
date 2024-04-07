@@ -2,7 +2,7 @@
 	<el-dialog :title="titleMap[mode]" v-model="visible" :width="500" destroy-on-close @closed="$emit('closed')">
 		<el-form :model="form" :rules="rules" :disabled="mode=='show'" ref="dialogForm" label-width="100px" label-position="left">
 			<el-form-item label="头像" prop="avatar">
-				<sc-upload v-model="form.avatar" title="上传头像"></sc-upload>
+				<hl-upload v-model="form.avatar" title="上传头像"></hl-upload>
 			</el-form-item>
 			<el-form-item label="登录账号" prop="userName">
 				<el-input v-model="form.userName" placeholder="用于登录系统" clearable></el-input>

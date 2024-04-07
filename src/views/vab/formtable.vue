@@ -8,7 +8,7 @@
 					<el-input v-model="form.title"></el-input>
 				</el-form-item>
 				<el-form-item label="表格" prop="list">
-					<sc-form-table ref="table" v-model="form.list" :addTemplate="addTemplate" drag-sort placeholder="暂无数据">
+					<hl-form-table ref="table" v-model="form.list" :addTemplate="addTemplate" drag-sort placeholder="暂无数据">
 						<el-table-column prop="time" label="时间" width="180">
 							<template #default="scope">
 								<el-time-select v-model="scope.row.time"></el-time-select>
@@ -36,7 +36,7 @@
 								<el-switch v-model="scope.row.open"></el-switch>
 							</template>
 						</el-table-column>
-					</sc-form-table>
+					</hl-form-table>
 				</el-form-item>
 				<el-form-item>
 					<el-button type="primary" @click="submitForm">保存</el-button>

@@ -7,13 +7,13 @@
 			</div>
 		</el-header>
 		<el-main>
-			<sc-workflow v-model="data.nodeConfig"></sc-workflow>
+			<hl-workflow v-model="data.nodeConfig"></hl-workflow>
 		</el-main>
 	</el-container>
 </template>
 
 <script>
-	import scWorkflow from '@/components/scWorkflow'
+	import scWorkflow from '@/components/hlWorkflow'
 
 	export default {
 		name: 'workflow',

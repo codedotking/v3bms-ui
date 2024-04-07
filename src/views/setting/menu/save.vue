@@ -26,7 +26,7 @@
 						<div class="el-form-item-msg">系统唯一且与内置组件名一致，否则导致缓存失效。如类型为Iframe的菜单，别名将代替源地址显示在地址栏</div>
 					</el-form-item>
 					<el-form-item label="菜单图标" prop="meta.icon">
-						<sc-icon-select v-model="form.meta.icon" clearable></sc-icon-select>
+						<hl-icon-select v-model="form.meta.icon" clearable></hl-icon-select>
 					</el-form-item>
 					<el-form-item label="路由地址" prop="path">
 						<el-input v-model="form.path" clearable placeholder=""></el-input>
@@ -67,7 +67,7 @@
 			</el-col>
 			<el-col :lg="12" class="apilist">
 				<h2>接口权限</h2>
-				<sc-form-table v-model="form.apiList" :addTemplate="apiListAddTemplate" placeholder="暂无匹配接口权限">
+				<hl-form-table v-model="form.apiList" :addTemplate="apiListAddTemplate" placeholder="暂无匹配接口权限">
 					<el-table-column prop="code" label="标识" width="150">
 						<template #default="scope">
 							<el-input v-model="scope.row.code" placeholder="请输入内容"></el-input>
@@ -78,7 +78,7 @@
 							<el-input v-model="scope.row.url" placeholder="请输入内容"></el-input>
 						</template>
 					</el-table-column>
-				</sc-form-table>
+				</hl-form-table>
 			</el-col>
 		</template>
 	</el-row>
@@ -86,7 +86,7 @@
 </template>
 
 <script>
-	import scIconSelect from '@/components/scIconSelect'
+	import scIconSelect from '@/components/hlIconSelect'
 
 	export default {
 		components: {

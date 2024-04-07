@@ -4,11 +4,11 @@
 			<el-col :lg="18">
 				<el-card shadow="never">
 					<el-alert title="资源库选择器即将弃用,将不会维护更新,与1.7版本之后将移除此组件" type="error" style="margin-bottom:20px;"></el-alert>
-					<sc-file-select v-model="file" :multiple="multiple" :hideUpload="hideUpload" :max="99" @submit="submit">
+					<hl-file-select v-model="file" :multiple="multiple" :hideUpload="hideUpload" :max="99" @submit="submit">
 						<template #do>
 							<el-button>自定义插槽</el-button>
 						</template>
-					</sc-file-select>
+					</hl-file-select>
 				</el-card>
 			</el-col>
 			<el-col :lg="6">
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-	import scFileSelect from '@/components/scFileSelect'
+	import scFileSelect from '@/components/hlFileSelect'
 
 	export default {
 		name: 'fileselect',

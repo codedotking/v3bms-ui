@@ -5,7 +5,7 @@
 		<el-row :gutter="15">
 			<template v-for="(item, index) in config.formItems" :key="index">
 				<el-col :span="item.span || 24" v-if="!hideHandle(item)">
-					<sc-title  v-if="item.component=='title'"  :title="item.label"></sc-title>
+					<hl-title  v-if="item.component=='title'"  :title="item.label"></hl-title>
 					<el-form-item v-else :prop="item.name" :rules="rulesHandle(item)">
 						<template #label>
 							{{item.label}}
@@ -36,7 +36,7 @@
 						<template v-else-if="item.component=='upload'" >
 							<el-col v-for="(_item, _index) in item.options.items" :key="_index">
 								<el-form-item :prop="_item.name">
-									<sc-upload v-model="form[_item.name]" :title="_item.label"></sc-upload>
+									<hl-upload v-model="form[_item.name]" :title="_item.label"></hl-upload>
 								</el-form-item>
 							</el-col>
 						</template>
@@ -86,7 +86,7 @@
 						</template>
 						<!-- editor -->
 						<template v-else-if="item.component=='editor'" >
-							<sc-editor v-model="form[item.name]" placeholder="请输入" :height="400"></sc-editor>
+							<hl-editor v-model="form[item.name]" placeholder="请输入" :height="400"></hl-editor>
 						</template>
 						<!-- noComponent -->
 						<template v-else>
@@ -112,7 +112,7 @@
 
 	import { defineAsyncComponent } from 'vue'
 	const tableselectRender = defineAsyncComponent(() => import('./items/tableselect'))
-	const scEditor = defineAsyncComponent(() => import('@/components/scEditor'))
+	const scEditor = defineAsyncComponent(() => import('@/components/hlEditor'))
 
 	export default {
 		props: {

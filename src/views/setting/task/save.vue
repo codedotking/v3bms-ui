@@ -8,7 +8,7 @@
 				<el-input v-model="form.handler" placeholder="计划任务执行类名称" clearable></el-input>
 			</el-form-item>
 			<el-form-item label="定时规则" prop="cron">
-				<sc-cron v-model="form.cron" placeholder="请输入Cron定时规则" clearable :shortcuts="shortcuts"></sc-cron>
+				<hl-cron v-model="form.cron" placeholder="请输入Cron定时规则" clearable :shortcuts="shortcuts"></hl-cron>
 			</el-form-item>
 			<el-form-item label="是否启用" prop="state">
 				<el-switch v-model="form.state" active-value="1" inactive-value="-1"></el-switch>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-	import scCron from '@/components/scCron';
+	import scCron from '@/components/hlCron';
 	
 	export default {
 		components: {

@@ -4,22 +4,22 @@
 		<el-row :gutter="15" style="margin-top: 20px;">
 			<el-col :lg="6">
 				<el-card shadow="never">
-					<sc-statistic title="文档" value="7.41" suffix="GB" groupSeparator></sc-statistic>
+					<hl-statistic title="文档" value="7.41" suffix="GB" groupSeparator></hl-statistic>
 				</el-card>
 			</el-col>
 			<el-col :lg="6">
 				<el-card shadow="never">
-					<sc-statistic title="图片" value="12.90" suffix="GB" groupSeparator></sc-statistic>
+					<hl-statistic title="图片" value="12.90" suffix="GB" groupSeparator></hl-statistic>
 				</el-card>
 			</el-col>
 			<el-col :lg="6">
 				<el-card shadow="never">
-					<sc-statistic title="视音频" value="68.79" suffix="MB" groupSeparator></sc-statistic>
+					<hl-statistic title="视音频" value="68.79" suffix="MB" groupSeparator></hl-statistic>
 				</el-card>
 			</el-col>
 			<el-col :lg="6">
 				<el-card shadow="never">
-					<sc-statistic title="其他" value="17.58" suffix="GB" groupSeparator></sc-statistic>
+					<hl-statistic title="其他" value="17.58" suffix="GB" groupSeparator></hl-statistic>
 				</el-card>
 			</el-col>
 		</el-row>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-	import scStatistic from '@/components/scStatistic';
+	import scStatistic from '@/components/hlStatistic';
 
 	export default {
 		components: {

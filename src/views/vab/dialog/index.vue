@@ -13,29 +13,29 @@
 		</el-card>
 	</el-main>
 
-	<sc-dialog v-model="dialog1" draggable title="提示">
+	<hl-dialog v-model="dialog1" draggable title="提示">
 		内容
 		<template #footer>
 			<el-button @click="dialog1 = false">取 消</el-button>
 			<el-button type="primary" @click="dialog1 = false">确 定</el-button>
 		</template>
-	</sc-dialog>
+	</hl-dialog>
 
-	<sc-dialog v-model="dialog2" draggable title="模拟加载" :width="400" :loading="dialog2Loading">
+	<hl-dialog v-model="dialog2" draggable title="模拟加载" :width="400" :loading="dialog2Loading">
 		<el-empty description="NO Data" :image-size="80"></el-empty>
 		<template #footer>
 			<el-button @click="dialog2 = false">取 消</el-button>
 			<el-button type="primary" @click="dialog2 = false" :loading="dialog2Loading">确 定</el-button>
 		</template>
-	</sc-dialog>
+	</hl-dialog>
 
-	<sc-dialog v-model="dialog3" title="禁用拖拽" :show-fullscreen="false" :show-close="false">
+	<hl-dialog v-model="dialog3" title="禁用拖拽" :show-fullscreen="false" :show-close="false">
 		内容
 		<template #footer>
 			<el-button @click="dialog3 = false">取 消</el-button>
 			<el-button type="primary" @click="dialog3 = false">确 定</el-button>
 		</template>
-	</sc-dialog>
+	</hl-dialog>
 
 	<dialog1 v-if="asynDialog1" draggable @closed="asynDialog1 = false"></dialog1>
 	<dialog2 v-if="asynDialog2" draggable @closed="asynDialog2 = false"></dialog2>

@@ -4,7 +4,7 @@
 		<el-row :gutter="15">
 			<el-col :lg="24">
 				<el-card shadow="never" header="JSON">
-					<sc-code-editor ref="editor" v-model="json" mode="javascript" :height="200"></sc-code-editor>
+					<hl-code-editor ref="editor" v-model="json" mode="javascript" :height="200"></hl-code-editor>
 					<div style="margin-top: 15px;">
 						<el-button type="primary" @click="getCode">获取v-model</el-button>
 						<el-button type="primary" @click="getValue">getValue()</el-button>
@@ -14,13 +14,13 @@
 			</el-col>
 			<el-col :lg="12">
 				<el-card shadow="never" header="javascript Darcula主题">
-					<sc-code-editor v-model="js" mode="javascript" theme="darcula"></sc-code-editor>
+					<hl-code-editor v-model="js" mode="javascript" theme="darcula"></hl-code-editor>
 				</el-card>
 			</el-col>
 
 			<el-col :lg="12">
 				<el-card shadow="never" header="SQL">
-					<sc-code-editor v-model="sql" mode="sql"></sc-code-editor>
+					<hl-code-editor v-model="sql" mode="sql"></hl-code-editor>
 				</el-card>
 			</el-col>
 		</el-row>
@@ -29,7 +29,7 @@
 
 <script>
 	import { defineAsyncComponent } from 'vue';
-	const scCodeEditor = defineAsyncComponent(() => import('@/components/scCodeEditor'));
+	const scCodeEditor = defineAsyncComponent(() => import('@/components/hlCodeEditor'));
 
 	export default {
 		name: "codeeditor",

@@ -4,21 +4,21 @@
 		<el-row :gutter="15">
 			<el-col :lg="8">
 				<el-card shadow="never">
-					<sc-statistic title="Title" value="112893" description="Description" tips="Tips" groupSeparator></sc-statistic>
+					<hl-statistic title="Title" value="112893" description="Description" tips="Tips" groupSeparator></hl-statistic>
 				</el-card>
 			</el-col>
 			<el-col :lg="8">
 				<el-card shadow="never">
-					<sc-statistic title="今日净利润" value="112893.00" prefix="¥" groupSeparator>
-						<sc-trend v-model="trendValue1"></sc-trend>
-					</sc-statistic>
+					<hl-statistic title="今日净利润" value="112893.00" prefix="¥" groupSeparator>
+						<hl-trend v-model="trendValue1"></hl-trend>
+					</hl-statistic>
 				</el-card>
 			</el-col>
 			<el-col :lg="8">
 				<el-card shadow="never">
-					<sc-statistic title="留言" value="112893" suffix="条" groupSeparator>
-						<sc-trend v-model="trendValue2"></sc-trend>
-					</sc-statistic>
+					<hl-statistic title="留言" value="112893" suffix="条" groupSeparator>
+						<hl-trend v-model="trendValue2"></hl-trend>
+					</hl-statistic>
 				</el-card>
 			</el-col>
 		</el-row>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-	import scStatistic from '@/components/scStatistic';
+	import scStatistic from '@/components/hlStatistic';
 
 	export default {
 		name: 'statistic',

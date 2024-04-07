@@ -4,25 +4,25 @@
 		<el-row :gutter="15">
 			<el-col :lg="12">
 				<el-card shadow="never" header="MP4点播">
-					<sc-video :src="playUrl" :options="options"></sc-video>
+					<hl-video :src="playUrl" :options="options"></hl-video>
 				</el-card>
 			</el-col>
 			<el-col :lg="12">
 				<el-card shadow="never" header="HlS(m3u8)直播">
 					<el-row :gutter="1">
 						<el-col :span="12">
-							<sc-video :src="liveUrl" isLive :options="{volume: 0}"></sc-video>
+							<hl-video :src="liveUrl" isLive :options="{volume: 0}"></hl-video>
 						</el-col>
 						<el-col :span="12">
-							<sc-video :src="liveUrl_2" isLive :options="{volume: 0}"></sc-video>
+							<hl-video :src="liveUrl_2" isLive :options="{volume: 0}"></hl-video>
 						</el-col>
 					</el-row>
 					<el-row :gutter="1" style="margin-top: 1px;">
 						<el-col :span="12">
-							<sc-video :src="liveUrl_3" isLive :options="{volume: 0}"></sc-video>
+							<hl-video :src="liveUrl_3" isLive :options="{volume: 0}"></hl-video>
 						</el-col>
 						<el-col :span="12">
-							<sc-video :src="liveUrl_4" isLive :options="{volume: 0}"></sc-video>
+							<hl-video :src="liveUrl_4" isLive :options="{volume: 0}"></hl-video>
 						</el-col>
 					</el-row>
 				</el-card>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-	import scVideo from '@/components/scVideo'
+	import scVideo from '@/components/hlVideo'
 
 	export default {
 		name: 'scvideo',

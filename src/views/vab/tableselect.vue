@@ -11,14 +11,14 @@
 	<el-main>
 		<el-alert title="select深度改造的表格选择器, 非常适用于大量数据选择的场景" type="success" style="margin-bottom:20px;"></el-alert>
 		<el-card shadow="never" header="单选">
-			<sc-table-select v-model="value2" :apiObj="apiObj" :params="params" :table-width="600" :props="props" @change="change">
+			<hl-table-select v-model="value2" :apiObj="apiObj" :params="params" :table-width="600" :props="props" @change="change">
 				<el-table-column prop="id" label="ID" width="180"></el-table-column>
 				<el-table-column prop="user" label="姓名"></el-table-column>
-			</sc-table-select>
+			</hl-table-select>
 		</el-card>
 		<div style="height:15px"></div>
 		<el-card shadow="never" header="多选">
-			<sc-table-select v-model="value" :apiObj="apiObj" :table-width="700" multiple clearable collapse-tags collapse-tags-tooltip :props="props" @change="change">
+			<hl-table-select v-model="value" :apiObj="apiObj" :table-width="700" multiple clearable collapse-tags collapse-tags-tooltip :props="props" @change="change">
 				<template #header="{form, submit}">
 					<el-form :inline="true" :model="form">
 						<el-form-item>
@@ -40,7 +40,7 @@
 				<el-table-column prop="user" label="姓名" width="100"></el-table-column>
 				<el-table-column prop="cip" label="最后请求IP" width="150"></el-table-column>
 				<el-table-column prop="time" label="注册时间"></el-table-column>
-			</sc-table-select>
+			</hl-table-select>
 		</el-card>
 	</el-main>
 </template>

@@ -17,10 +17,10 @@
 			</el-col>
 			<el-col :lg="12">
 				<el-card shadow="never" header="动态表单渲染器">
-					<sc-form ref="formref" :config="config" v-model="form" :loading="loading">
+					<hl-form ref="formref" :config="config" v-model="form" :loading="loading">
 						<el-button type="primary" @click="save">保 存</el-button>
 						<el-button @click="reset">重 置</el-button>
-					</sc-form>
+					</hl-form>
 				</el-card>
 			</el-col>
 			<el-col :lg="6">

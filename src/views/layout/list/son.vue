@@ -36,8 +36,8 @@
 					<el-table-column label="姓名" prop="name" width="180"></el-table-column>
 					<el-table-column label="状态" prop="type" width="60">
 						<template #default="scope">
-							<sc-status-indicator v-if="scope.row.type==0" type="success"></sc-status-indicator>
-							<sc-status-indicator v-if="scope.row.type==1" pulse type="danger"></sc-status-indicator>
+							<hl-status-indicator v-if="scope.row.type==0" type="success"></hl-status-indicator>
+							<hl-status-indicator v-if="scope.row.type==1" pulse type="danger"></hl-status-indicator>
 						</template>
 					</el-table-column>
 					<el-table-column label="邮箱" prop="email" width="250"></el-table-column>

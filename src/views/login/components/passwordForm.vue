@@ -87,13 +87,8 @@ export default {
 						expires: this.form.autologin ? 24 * 60 * 60 : 0
 					})
 					this.$TOOL.data.set("USER_INFO", data.userInfo);
-
-
 					//获取菜单
 					const menu = await this.$API.system.menu.myMenus.get();
-					console.log(menu);
-
-					console.log(menu.data.menu);
 					if (menu.code == 200) {
 						if (menu.data.menu.length == 0) {
 							this.islogin = false
@@ -115,7 +110,7 @@ export default {
 					this.$router.replace({
 						path: '/'
 					})
-					this.$message.success("Login Success 登录成功")
+					this.$message.success("登录成功")
 					this.islogin = false
 					return
 				}

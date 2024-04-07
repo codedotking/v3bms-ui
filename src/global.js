@@ -4,24 +4,24 @@ import tool from './utils/tool'
 import http from "./utils/request"
 import { permission, rolePermission } from './utils/permission'
 
-import scTable from './components/scTable/index.vue'
-import scTableColumn from './components/scTable/column.js'
-import scFilterBar from './components/scFilterBar'
-import scUpload from './components/scUpload'
-import scUploadMultiple from './components/scUpload/multiple'
-import scUploadFile from './components/scUpload/file'
-import scFormTable from './components/scFormTable'
-import scTableSelect from './components/scTableSelect'
-import scPageHeader from './components/scPageHeader'
-import scSelect from './components/scSelect'
-import scDialog from './components/scDialog'
-import scForm from './components/scForm'
-import scTitle from './components/scTitle'
-import scWaterMark from './components/scWaterMark'
-import scQrCode from './components/scQrCode'
+import scTable from './components/hlTable/index.vue'
+import scTableColumn from './components/hlTable/column.js'
+import scFilterBar from './components/hlFilterBar/index'
+import scUpload from './components/hlUpload'
+import scUploadMultiple from './components/hlUpload/multiple'
+import scUploadFile from './components/hlUpload/file'
+import scFormTable from './components/hlFormTable'
+import scTableSelect from './components/hlTableSelect'
+import scPageHeader from './components/hlPageHeader'
+import scSelect from './components/hlSelect'
+import scDialog from './components/hlDialog'
+import scForm from './components/hlForm'
+import scTitle from './components/hlTitle'
+import scWaterMark from './components/hlWaterMark'
+import scQrCode from './components/hlQrCode'
 
-import scStatusIndicator from './components/scMini/scStatusIndicator'
-import scTrend from './components/scMini/scTrend'
+import scStatusIndicator from './components/hlMini/hlStatusIndicator'
+import scTrend from './components/hlMini/hlTrend'
 
 import auth from './directives/auth'
 import auths from './directives/auths'
@@ -45,23 +45,23 @@ export default {
 		app.config.globalProperties.$ROLE = rolePermission;
 
 		//注册全局组件
-		app.component('scTable', scTable);
-		app.component('scTableColumn', scTableColumn);
-		app.component('scFilterBar', scFilterBar);
-		app.component('scUpload', scUpload);
-		app.component('scUploadMultiple', scUploadMultiple);
-		app.component('scUploadFile', scUploadFile);
-		app.component('scFormTable', scFormTable);
-		app.component('scTableSelect', scTableSelect);
-		app.component('scPageHeader', scPageHeader);
-		app.component('scSelect', scSelect);
-		app.component('scDialog', scDialog);
-		app.component('scForm', scForm);
-		app.component('scTitle', scTitle);
-		app.component('scWaterMark', scWaterMark);
-		app.component('scQrCode', scQrCode);
-		app.component('scStatusIndicator', scStatusIndicator);
-		app.component('scTrend', scTrend);
+		app.component('hlTable', scTable);
+		app.component('hlTableColumn', scTableColumn);
+		app.component('hlFilterBar', scFilterBar);
+		app.component('hlUpload', scUpload);
+		app.component('hlUploadMultiple', scUploadMultiple);
+		app.component('hlUploadFile', scUploadFile);
+		app.component('hlFormTable', scFormTable);
+		app.component('hlTableSelect', scTableSelect);
+		app.component('hlPageHeader', scPageHeader);
+		app.component('hlSelect', scSelect);
+		app.component('hlDialog', scDialog);
+		app.component('hlForm', scForm);
+		app.component('hlTitle', scTitle);
+		app.component('hlWaterMark', scWaterMark);
+		app.component('hlQrCode', scQrCode);
+		app.component('hlStatusIndicator', scStatusIndicator);
+		app.component('hlTrend', scTrend);
 
 		//注册全局指令
 		app.directive('auth', auth)

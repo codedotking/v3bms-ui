@@ -1,13 +1,13 @@
 <template>
 	<el-main>
 		<el-card shadow="never">
-			<sc-water-mark ref="wm" text="欢迎体验HUALA" subtext="admin@HUALA.com">
+			<hl-water-mark ref="wm" text="欢迎体验HUALA" subtext="admin@HUALA.com">
 				<el-table :data="tableData" border stripe style="width: 100%">
 					<el-table-column prop="date" label="Date" width="180" />
 					<el-table-column prop="name" label="Name" width="180" />
 					<el-table-column prop="address" label="Address" />
 				</el-table>
-			</sc-water-mark>
+			</hl-water-mark>
 		</el-card>
 		<el-card shadow="never" style="margin-top: 15px;">
 			<el-button type="primary" @click="create">创建水印</el-button>

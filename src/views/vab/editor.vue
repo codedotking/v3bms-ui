@@ -1,7 +1,7 @@
 <template>
 	<el-main>
 		<el-card shadow="never">
-			<sc-editor v-model="html" placeholder="请输入" :templates="templates" :height="400"></sc-editor>
+			<hl-editor v-model="html" placeholder="请输入" :templates="templates" :height="400"></hl-editor>
 		</el-card>
 		<el-card shadow="never" header="配置" style="margin-top: 20px;">
 			<el-descriptions border :column="1">
@@ -21,7 +21,7 @@
 
 <script>
 	import { defineAsyncComponent } from 'vue';
-	const scEditor = defineAsyncComponent(() => import('@/components/scEditor'));
+	const scEditor = defineAsyncComponent(() => import('@/components/hlEditor'));
 
 	export default {
 		name: "editor",

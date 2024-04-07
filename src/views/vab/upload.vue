@@ -1,33 +1,33 @@
 <template>
 	<el-main>
 		<el-card shadow="never" header="文件示例">
-			<sc-upload-file v-model="fileurl" :limit="3" :data="{otherData:'demo'}" tip="最多上传3个文件,单个文件不要超过10M,请上传xlsx/docx格式文件">
+			<hl-upload-file v-model="fileurl" :limit="3" :data="{otherData:'demo'}" tip="最多上传3个文件,单个文件不要超过10M,请上传xlsx/docx格式文件">
 				<el-button type="primary" icon="el-icon-upload">上传附件</el-button>
-			</sc-upload-file>
+			</hl-upload-file>
 		</el-card>
 
 		<el-card shadow="never" header="文件示例(值为对象数组,适合保存原始文件名)">
-			<sc-upload-file v-model="fileurlArr" :limit="3" tip="最多上传3个文件,单个文件不要超过10M,请上传xlsx/docx格式文件">
+			<hl-upload-file v-model="fileurlArr" :limit="3" tip="最多上传3个文件,单个文件不要超过10M,请上传xlsx/docx格式文件">
 				<el-button type="primary" icon="el-icon-upload">上传附件</el-button>
-			</sc-upload-file>
+			</hl-upload-file>
 		</el-card>
 
 		<el-card shadow="never" header="图片卡片示例(已开启拖拽排序)">
-			<sc-upload-multiple v-model="fileurl2" draggable :limit="3" tip="最多上传3个文件,单个文件不要超过10M,请上传图像格式文件"></sc-upload-multiple>
+			<hl-upload-multiple v-model="fileurl2" draggable :limit="3" tip="最多上传3个文件,单个文件不要超过10M,请上传图像格式文件"></hl-upload-multiple>
 		</el-card>
 
 		<el-card shadow="never" header="单图像示例">
 			<el-space wrap :size="8">
-				<sc-upload v-model="fileurl3"></sc-upload>
-				<sc-upload v-model="fileurl4" title="自定义标题" icon="el-icon-picture"></sc-upload>
-				<sc-upload v-model="fileurl5" :apiObj="uploadApi" accept="image/jpg,image/png" :on-success="success" :width="220">
+				<hl-upload v-model="fileurl3"></hl-upload>
+				<hl-upload v-model="fileurl4" title="自定义标题" icon="el-icon-picture"></hl-upload>
+				<hl-upload v-model="fileurl5" :apiObj="uploadApi" accept="image/jpg,image/png" :on-success="success" :width="220">
 					<div class="custom-empty">
 						<el-icon><el-icon-upload /></el-icon>
 						<p>自定义插槽</p>
 					</div>
-				</sc-upload>
-				<sc-upload v-model="fileurl6" round icon="el-icon-avatar" title="开启圆形"></sc-upload>
-				<sc-upload v-model="fileurl7" title="开启剪裁" :cropper="true" :compress="1" :aspectRatio="1/1"></sc-upload>
+				</hl-upload>
+				<hl-upload v-model="fileurl6" round icon="el-icon-avatar" title="开启圆形"></hl-upload>
+				<hl-upload v-model="fileurl7" title="开启剪裁" :cropper="true" :compress="1" :aspectRatio="1/1"></hl-upload>
 			</el-space>
 		</el-card>
 
@@ -38,23 +38,23 @@
 				<el-form-item label="身份证" required>
 					<el-space wrap :size="8">
 						<el-form-item prop="file1">
-							<sc-upload v-model="form.file1" title="人像面"></sc-upload>
+							<hl-upload v-model="form.file1" title="人像面"></hl-upload>
 						</el-form-item>
 						<el-form-item prop="file2">
-							<sc-upload v-model="form.file2" title="国徽面"></sc-upload>
+							<hl-upload v-model="form.file2" title="国徽面"></hl-upload>
 						</el-form-item>
 					</el-space>
 				</el-form-item>
 				<el-form-item label="其他凭证" prop="file3">
-					<sc-upload-multiple v-model="form.file3"></sc-upload-multiple>
+					<hl-upload-multiple v-model="form.file3"></hl-upload-multiple>
 				</el-form-item>
 				<el-form-item label="附件" prop="file4">
-					<sc-upload-file v-model="form.file4" :limit="1" drag>
+					<hl-upload-file v-model="form.file4" :limit="1" drag>
 						<el-icon class="el-icon--upload"><el-icon-upload-filled /></el-icon>
 						    <div class="el-upload__text">
 						      Drop file here or <em>click to upload</em>
 						    </div>
-					</sc-upload-file>
+					</hl-upload-file>
 				</el-form-item>
 				<el-form-item label="日期" prop="date">
 					<el-date-picker type="date" placeholder="选择日期" v-model="form.date"></el-date-picker>

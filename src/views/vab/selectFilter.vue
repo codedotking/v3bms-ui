@@ -1,7 +1,7 @@
 <template>
 	<el-main>
 		<el-card shadow="never" header="分类筛选器">
-			<sc-select-filter :data="data" :selected-values="selectedValues" :label-width="80" @on-change="change"></sc-select-filter>
+			<hl-select-filter :data="data" :selected-values="selectedValues" :label-width="80" @on-change="change"></hl-select-filter>
 		</el-card>
 		<el-card shadow="never" header="返回值" style="margin-top: 15px;">
 			<pre>{{ filterData }}</pre>
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-	import scSelectFilter from '@/components/scSelectFilter'
+	import scSelectFilter from '@/components/hlSelectFilter'
 
 	export default {
 		name: 'selectFilter',

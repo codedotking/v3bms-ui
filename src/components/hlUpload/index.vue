@@ -37,8 +37,8 @@
 		<span style="display:none!important"><el-input v-model="value"></el-input></span>
 		<el-dialog title="剪裁" draggable v-model="cropperDialogVisible" :width="580" @closed="cropperClosed"
 			destroy-on-close>
-			<sc-cropper :src="cropperFile.tempCropperFile" :compress="compress" :aspectRatio="aspectRatio"
-				ref="cropper"></sc-cropper>
+			<hl-cropper :src="cropperFile.tempCropperFile" :compress="compress" :aspectRatio="aspectRatio"
+				ref="cropper"></hl-cropper>
 			<template #footer>
 				<el-button @click="cropperDialogVisible = false">取 消</el-button>
 				<el-button type="primary" @click="cropperSave">确 定</el-button>
@@ -50,7 +50,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import { genFileId } from 'element-plus'
-const scCropper = defineAsyncComponent(() => import('@/components/scCropper'))
+const scCropper = defineAsyncComponent(() => import('@/components/hlCropper'))
 import config from "@/config/upload"
 
 export default {

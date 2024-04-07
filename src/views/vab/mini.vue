@@ -5,20 +5,20 @@
 			<el-col :lg="8">
 				<el-card shadow="never" header="脉冲圆点">
 					<el-space wrap :size="15">
-						<sc-status-indicator pulse type="primary"></sc-status-indicator>
-						<sc-status-indicator pulse type="success"></sc-status-indicator>
-						<sc-status-indicator pulse type="warning"></sc-status-indicator>
-						<sc-status-indicator pulse type="danger"></sc-status-indicator>
-						<sc-status-indicator type="info"></sc-status-indicator>
+						<hl-status-indicator pulse type="primary"></hl-status-indicator>
+						<hl-status-indicator pulse type="success"></hl-status-indicator>
+						<hl-status-indicator pulse type="warning"></hl-status-indicator>
+						<hl-status-indicator pulse type="danger"></hl-status-indicator>
+						<hl-status-indicator type="info"></hl-status-indicator>
 					</el-space>
 				</el-card>
 			</el-col>
 			<el-col :lg="8">
 				<el-card shadow="never" header="趋势">
 					<el-space wrap :size="15">
-						<sc-trend v-model="trendValue" prefix="¥"></sc-trend>
-						<sc-trend v-model="trendValue2"></sc-trend>
-						<sc-trend v-model="trendValue3" suffix="%"></sc-trend>
+						<hl-trend v-model="trendValue" prefix="¥"></hl-trend>
+						<hl-trend v-model="trendValue2"></hl-trend>
+						<hl-trend v-model="trendValue3" suffix="%"></hl-trend>
 					</el-space>
 
 					<p style="margin-top: 15px;color: #999;">设置reverse可反转颜色。</p>
@@ -29,7 +29,7 @@
 					<div class="up">
 						<h2>持续更新中...</h2>
 						<p>非常欢迎提交Issue/PR完善和补充更多好玩的原子组件</p>
-						<p>原子组件库位置：@/components/scMini/*</p>
+						<p>原子组件库位置：@/components/hlMini/*</p>
 						<el-button type="primary" text @click="goIssue">提交想法</el-button>
 					</div>
 				</el-card>

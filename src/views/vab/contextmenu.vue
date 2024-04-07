@@ -27,27 +27,27 @@
 		</el-row>
 	</el-main>
 
-	<sc-contextmenu ref="contextmenu" @command="handleCommand" @visible-change="visibleChange">
-		<sc-contextmenu-item command="a" title="返回(B)" suffix="Alt+←"></sc-contextmenu-item>
-		<sc-contextmenu-item command="b" title="重新加载(R)" suffix="Ctrl+R" icon="el-icon-refresh"></sc-contextmenu-item>
-		<sc-contextmenu-item title="切换兼容性模式" divided>
-			<sc-contextmenu-item command="c1" title="二级菜单1"></sc-contextmenu-item>
-			<sc-contextmenu-item title="二级菜单2">
-				<sc-contextmenu-item command="c2-1" title="三级菜单1"></sc-contextmenu-item>
-				<sc-contextmenu-item command="c2-2" title="三级菜单2"></sc-contextmenu-item>
-				<sc-contextmenu-item command="c2-3" title="三级菜单3"></sc-contextmenu-item>
-			</sc-contextmenu-item>
-			<sc-contextmenu-item command="c3" title="二级菜单3"></sc-contextmenu-item>
-		</sc-contextmenu-item>
-		<sc-contextmenu-item  command="d" title="属性(P)" divided :disabled="row&&row.state==0"></sc-contextmenu-item>
-		<sc-contextmenu-item  command="e" title="设置state=1" v-if="row&&row.state==0"></sc-contextmenu-item>
-	</sc-contextmenu>
+	<hl-contextmenu ref="contextmenu" @command="handleCommand" @visible-change="visibleChange">
+		<hl-contextmenu-item command="a" title="返回(B)" suffix="Alt+←"></hl-contextmenu-item>
+		<hl-contextmenu-item command="b" title="重新加载(R)" suffix="Ctrl+R" icon="el-icon-refresh"></hl-contextmenu-item>
+		<hl-contextmenu-item title="切换兼容性模式" divided>
+			<hl-contextmenu-item command="c1" title="二级菜单1"></hl-contextmenu-item>
+			<hl-contextmenu-item title="二级菜单2">
+				<hl-contextmenu-item command="c2-1" title="三级菜单1"></hl-contextmenu-item>
+				<hl-contextmenu-item command="c2-2" title="三级菜单2"></hl-contextmenu-item>
+				<hl-contextmenu-item command="c2-3" title="三级菜单3"></hl-contextmenu-item>
+			</hl-contextmenu-item>
+			<hl-contextmenu-item command="c3" title="二级菜单3"></hl-contextmenu-item>
+		</hl-contextmenu-item>
+		<hl-contextmenu-item  command="d" title="属性(P)" divided :disabled="row&&row.state==0"></hl-contextmenu-item>
+		<hl-contextmenu-item  command="e" title="设置state=1" v-if="row&&row.state==0"></hl-contextmenu-item>
+	</hl-contextmenu>
 
 </template>
 
 <script>
-	import scContextmenu from '@/components/scContextmenu'
-	import scContextmenuItem from '@/components/scContextmenu/item'
+	import scContextmenu from '@/components/hlContextmenu'
+	import scContextmenuItem from '@/components/hlContextmenu/item'
 	export default {
 		name: 'contextmenu',
 		components: {
