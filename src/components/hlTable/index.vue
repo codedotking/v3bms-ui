@@ -1,7 +1,7 @@
 <template>
-	<div class="scTable" :style="{'height':_height}" ref="scTableMain" v-loading="loading">
-		<div class="scTable-table" :style="{'height':_table_height}">
-			<el-table v-bind="$attrs" :data="tableData" :row-key="rowKey" :key="toggleIndex" ref="scTable" :height="height=='auto'?null:'100%'" :size="config.size" :border="config.border" :stripe="config.stripe" :summary-method="remoteSummary?remoteSummaryMethod:summaryMethod" @sort-change="sortChange" @filter-change="filterChange">
+	<div class="hlTable" :style="{'height':_height}" ref="hlTableMain" v-loading="loading">
+		<div class="hlTable-table" :style="{'height':_table_height}">
+			<el-table v-bind="$attrs" :data="tableData" :row-key="rowKey" :key="toggleIndex" ref="hlTable" :height="height=='auto'?null:'100%'" :size="config.size" :border="config.border" :stripe="config.stripe" :summary-method="remoteSummary?remoteSummaryMethod:summaryMethod" @sort-change="sortChange" @filter-change="filterChange">
 				<slot></slot>
 				<template v-for="(item, index) in userColumn" :key="index">
 					<el-table-column v-if="!item.hide" :column-key="item.prop" :label="item.label" :prop="item.prop" :width="item.width" :sortable="item.sortable" :fixed="item.fixed" :filters="item.filters" :filter-method="remoteFilter||!item.filters?null:filterHandler" :show-overflow-tooltip="item.showOverflowTooltip">
@@ -18,11 +18,11 @@
 				</template>
 			</el-table>
 		</div>
-		<div class="scTable-page" v-if="!hidePagination || !hideDo">
-			<div class="scTable-pagination">
+		<div class="hlTable-page" v-if="!hidePagination || !hideDo">
+			<div class="hlTable-pagination">
 				<el-pagination v-if="!hidePagination" background :small="true" :layout="paginationLayout" :total="total" :page-size="scPageSize" :page-sizes="pageSizes" v-model:currentPage="currentPage" @current-change="paginationChange" @update:page-size="pageSizeChange"></el-pagination>
 			</div>
-			<div class="scTable-do" v-if="!hideDo">
+			<div class="hlTable-do" v-if="!hideDo">
 				<el-button v-if="!hideRefresh" @click="refresh" icon="el-icon-refresh" circle style="margin-left:15px"></el-button>
 				<el-popover v-if="column" placement="top" title="列设置" :width="500" trigger="click" :hide-after="0" @show="customColumnShow=true" @after-leave="customColumnShow=false">
 					<template #reference>
@@ -58,7 +58,7 @@
 	import columnSetting from './columnSetting'
 
 	export default {
-		name: 'scTable',
+		name: 'hlTable',
 		components: {
 			columnSetting
 		},
@@ -148,7 +148,7 @@
 		},
 		activated(){
 			if(!this.isActivat){
-				this.$refs.scTable.doLayout()
+				this.$refs.hlTable.doLayout()
 			}
 		},
 		deactivated(){
@@ -203,7 +203,7 @@
 					this.summary = response.summary || {};
 					this.loading = false;
 				}
-				this.$refs.scTable.setScrollTop(0)
+				this.$refs.hlTable.setScrollTop(0)
 				this.$emit('dataChange', res, this.tableData)
 			},
 			//分页点击
@@ -217,13 +217,13 @@
 			},
 			//刷新数据
 			refresh(){
-				this.$refs.scTable.clearSelection();
+				this.$refs.hlTable.clearSelection();
 				this.getData();
 			},
 			//更新数据 合并上一次params
 			upData(params, page=1){
 				this.currentPage = page;
-				this.$refs.scTable.clearSelection();
+				this.$refs.hlTable.clearSelection();
 				Object.assign(this.tableParams, params || {})
 				this.getData()
 			},
@@ -231,9 +231,9 @@
 			reload(params, page=1){
 				this.currentPage = page;
 				this.tableParams = params || {}
-				this.$refs.scTable.clearSelection();
-				this.$refs.scTable.clearSort()
-				this.$refs.scTable.clearFilter()
+				this.$refs.hlTable.clearSelection();
+				this.$refs.hlTable.clearSort()
+				this.$refs.hlTable.clearFilter()
 				this.getData()
 			},
 			//自定义变化事件
@@ -314,7 +314,7 @@
 				return sums
 			},
 			configSizeChange(){
-				this.$refs.scTable.doLayout()
+				this.$refs.hlTable.doLayout()
 			},
 			//插入行 unshiftRow
 			unshiftRow(row){
@@ -356,42 +356,42 @@
 			},
 			//原生方法转发
 			clearSelection(){
-				this.$refs.scTable.clearSelection()
+				this.$refs.hlTable.clearSelection()
 			},
 			toggleRowSelection(row, selected){
-				this.$refs.scTable.toggleRowSelection(row, selected)
+				this.$refs.hlTable.toggleRowSelection(row, selected)
 			},
 			toggleAllSelection(){
-				this.$refs.scTable.toggleAllSelection()
+				this.$refs.hlTable.toggleAllSelection()
 			},
 			toggleRowExpansion(row, expanded){
-				this.$refs.scTable.toggleRowExpansion(row, expanded)
+				this.$refs.hlTable.toggleRowExpansion(row, expanded)
 			},
 			setCurrentRow(row){
-				this.$refs.scTable.setCurrentRow(row)
+				this.$refs.hlTable.setCurrentRow(row)
 			},
 			clearSort(){
-				this.$refs.scTable.clearSort()
+				this.$refs.hlTable.clearSort()
 			},
 			clearFilter(columnKey){
-				this.$refs.scTable.clearFilter(columnKey)
+				this.$refs.hlTable.clearFilter(columnKey)
 			},
 			doLayout(){
-				this.$refs.scTable.doLayout()
+				this.$refs.hlTable.doLayout()
 			},
 			sort(prop, order){
-				this.$refs.scTable.sort(prop, order)
+				this.$refs.hlTable.sort(prop, order)
 			}
 		}
 	}
 </script>
 
 <style scoped>
-	.scTable {}
-	.scTable-table {height: calc(100% - 50px);}
-	.scTable-page {height:50px;display: flex;align-items: center;justify-content: space-between;padding:0 15px;}
-	.scTable-do {white-space: nowrap;}
-	.scTable:deep(.el-table__footer) .cell {font-weight: bold;}
-	.scTable:deep(.el-table__body-wrapper) .el-scrollbar__bar.is-horizontal {height: 12px;border-radius: 12px;}
-	.scTable:deep(.el-table__body-wrapper) .el-scrollbar__bar.is-vertical {width: 12px;border-radius: 12px;}
+	.hlTable {}
+	.hlTable-table {height: calc(100% - 50px);}
+	.hlTable-page {height:50px;display: flex;align-items: center;justify-content: space-between;padding:0 15px;}
+	.hlTable-do {white-space: nowrap;}
+	.hlTable:deep(.el-table__footer) .cell {font-weight: bold;}
+	.hlTable:deep(.el-table__body-wrapper) .el-scrollbar__bar.is-horizontal {height: 12px;border-radius: 12px;}
+	.hlTable:deep(.el-table__body-wrapper) .el-scrollbar__bar.is-vertical {width: 12px;border-radius: 12px;}
 </style>

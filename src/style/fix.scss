@@ -56,12 +56,12 @@
 .el-table .el-table__body-wrapper {background: #f6f8f9;}
 .el-col .el-card {margin-bottom: 15px;}
 .el-main {flex-basis: 100%;}
-.el-main > .scTable .el-table--border::before {display: none;}
-.el-main > .scTable .el-table--border::after {display: none;}
-.el-main > .scTable .el-table--border .el-table__inner-wrapper::after {display: none;}
-.el-main > .scTable .el-table__border-left-patch {display: none;}
-.el-main > .scTable .el-table--border .el-table__inner-wrapper tr:first-child td:first-child {border-left: 0;}
-.el-main > .scTable .el-table--border .el-table__inner-wrapper tr:first-child th:first-child {border-left: 0;}
+.el-main > .hlTable .el-table--border::before {display: none;}
+.el-main > .hlTable .el-table--border::after {display: none;}
+.el-main > .hlTable .el-table--border .el-table__inner-wrapper::after {display: none;}
+.el-main > .hlTable .el-table__border-left-patch {display: none;}
+.el-main > .hlTable .el-table--border .el-table__inner-wrapper tr:first-child td:first-child {border-left: 0;}
+.el-main > .hlTable .el-table--border .el-table__inner-wrapper tr:first-child th:first-child {border-left: 0;}
 .el-table.el-table--large {font-size: 14px;}
 .el-table.el-table--small {font-size: 12px;}
 .el-table {font-size: 12px;}

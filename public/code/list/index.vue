@@ -13,7 +13,7 @@
 			</div>
 		</el-header>
 		<el-main class="nopadding">
-			<scTable ref="table" :apiObj="apiObj" row-key="<%= base.rowKey %>" @selection-change="selectionChange">
+			<hlTable ref="table" :apiObj="apiObj" row-key="<%= base.rowKey %>" @selection-change="selectionChange">
 
 				<el-table-column type="selection" width="50"></el-table-column>
 				<% column.forEach(function(item, index){ %>
@@ -30,7 +30,7 @@
 						</el-popconfirm>
 					</template>
 				</el-table-column>
-			</scTable>
+			</hlTable>
 		</el-main>
 	</el-container>
 

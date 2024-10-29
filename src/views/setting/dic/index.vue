@@ -34,7 +34,7 @@
 				</div>
 			</el-header>
 			<el-main class="nopadding">
-				<scTable ref="table" :apiObj="listApi" row-key="id" :params="listApiParams" @selection-change="selectionChange" stripe :paginationLayout="'prev, pager, next'">
+				<hlTable ref="table" :apiObj="listApi" row-key="id" :params="listApiParams" @selection-change="selectionChange" stripe :paginationLayout="'prev, pager, next'">
 					<el-table-column type="selection" width="50"></el-table-column>
 					<el-table-column label="" width="60">
 						<template #default>
@@ -60,7 +60,7 @@
 							</el-button-group>
 						</template>
 					</el-table-column>
-				</scTable>
+				</hlTable>
 			</el-main>
 		</el-container>
 	</el-container>

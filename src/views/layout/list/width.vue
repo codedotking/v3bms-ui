@@ -8,7 +8,7 @@
 				<el-button type="primary" text>管理秘钥</el-button>
 				<el-button type="primary" text>黑名单</el-button>
 			</div>
-			<scTable ref="table" :data="data" height="auto" paginationLayout="total, prev, pager, next" hideDo>
+			<hlTable ref="table" :data="data" height="auto" paginationLayout="total, prev, pager, next" hideDo>
 				<el-table-column label="主机名称" prop="name" min-width="240"></el-table-column>
 				<el-table-column label="外网ip" prop="ip" width="200"></el-table-column>
 				<el-table-column label="系统盘" prop="c" width="150"></el-table-column>
@@ -29,7 +29,7 @@
 						</template>
 					</el-dropdown>
 				</el-table-column>
-			</scTable>
+			</hlTable>
 		</el-card>
 	</el-main>
 </template>

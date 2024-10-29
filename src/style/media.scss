@@ -11,11 +11,11 @@
 		>.el-container {display: block;height:auto;}
 		>.el-container > .el-aside {width: 100%!important;border: 0}
 	}
-	.scTable {
+	.hlTable {
 		.el-table,
 		.el-table__body-wrapper {display: block!important;height:auto!important;}
 		.el-scrollbar__wrap {height:auto!important;}
-		.scTable-page {padding: 0 5px!important;}
+		.hlTable-page {padding: 0 5px!important;}
 		.el-pagination__total,
 		.el-pagination__jump,
 		.el-pagination__sizes {display: none!important;}

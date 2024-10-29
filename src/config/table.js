@@ -25,7 +25,7 @@ export default {
 	},
 	/**
 	 * 自定义列保存处理
-	 * @tableName scTable组件的props->tableName
+	 * @tableName hlTable组件的props->tableName
 	 * @column 员工配置好的列
 	 */
 	columnSettingSave: function (tableName, column) {
@@ -39,7 +39,7 @@ export default {
 	},
 	/**
 	 * 获取自定义列
-	 * @tableName scTable组件的props->tableName
+	 * @tableName hlTable组件的props->tableName
 	 * @column 组件接受到的props->column
 	 */
 	columnSettingGet: function (tableName, column) {
@@ -55,7 +55,7 @@ export default {
 	},
 	/**
 	 * 重置自定义列
-	 * @tableName scTable组件的props->tableName
+	 * @tableName hlTable组件的props->tableName
 	 * @column 组件接受到的props->column
 	 */
 	columnSettingReset: function (tableName, column) {

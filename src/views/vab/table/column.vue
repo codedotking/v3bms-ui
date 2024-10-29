@@ -10,12 +10,12 @@
 			</div>
 		</el-header>
 		<el-main class="nopadding">
-			<scTable ref="table" tableName="listCustomColumn" :apiObj="list.apiObj" :column="list.column" row-key="id" stripe>
+			<hlTable ref="table" tableName="listCustomColumn" :apiObj="list.apiObj" :column="list.column" row-key="id" stripe>
 				<el-table-column type="selection" width="50"></el-table-column>
 				<template #progress="scope">
 					<el-progress :percentage="scope.row.progress" />
 				</template>
-			</scTable>
+			</hlTable>
 		</el-main>
 	</el-container>
 </template>

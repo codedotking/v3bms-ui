@@ -8,7 +8,7 @@
 			</div>
 		</el-header>
 		<el-main class="nopadding">
-			<scTable ref="table" :apiObj="list.apiObj" row-key="id" @selection-change="selectionChange" stripe>
+			<hlTable ref="table" :apiObj="list.apiObj" row-key="id" @selection-change="selectionChange" stripe>
 				<el-table-column type="selection" width="50"></el-table-column>
 				<el-table-column label="姓名" prop="name" width="180"></el-table-column>
 				<el-table-column label="性别" prop="sex" width="150"></el-table-column>
@@ -32,7 +32,7 @@
 						</el-popconfirm>
 					</template>
 				</el-table-column>
-			</scTable>
+			</hlTable>
 		</el-main>
 	</el-container>
 

@@ -6,7 +6,7 @@
 			</div>
 		</el-header>
 		<el-main class="nopadding">
-			<scTable ref="table" :apiObj="apiObj" row-key="id" @selection-change="selectionChange" stripe>
+			<hlTable ref="table" :apiObj="apiObj" row-key="id" @selection-change="selectionChange" stripe>
 				<el-table-column type="selection" width="50"></el-table-column>
 				<el-table-column label="标识" prop="code" width="150"></el-table-column>
 				<el-table-column label="表格名称" prop="name" width="250"></el-table-column>
@@ -23,7 +23,7 @@
 						</el-button-group>
 					</template>
 				</el-table-column>
-			</scTable>
+			</hlTable>
 		</el-main>
 	</el-container>
 	

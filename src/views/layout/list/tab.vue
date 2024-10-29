@@ -25,7 +25,7 @@
 			</div>
 		</el-header>
 		<el-main class="nopadding">
-			<scTable ref="table" :apiObj="list.apiObj" row-key="id" stripe>
+			<hlTable ref="table" :apiObj="list.apiObj" row-key="id" stripe>
 				<el-table-column type="selection" width="50"></el-table-column>
 				<el-table-column label="姓名" prop="name" width="150"></el-table-column>
 				<el-table-column label="性别" prop="sex" width="150"></el-table-column>
@@ -41,7 +41,7 @@
 						</el-button-group>
 					</template>
 				</el-table-column>
-			</scTable>
+			</hlTable>
 		</el-main>
 	</el-container>
 </template>

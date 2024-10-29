@@ -1,7 +1,7 @@
 <template>
 	<el-container>
 		<el-main  style="padding:0 20px;">
-			<scTable ref="table" :data="data" stripe>
+			<hlTable ref="table" :data="data" stripe>
 				<el-table-column label="执行时间" prop="time" width="200"></el-table-column>
 				<el-table-column label="执行结果" prop="state" width="100">
 					<template #default="scope">
@@ -14,7 +14,7 @@
 						<el-button size="small" @click="show(scope.row)" type="text">日志</el-button>
 					</template>
 				</el-table-column>
-			</scTable>
+			</hlTable>
 		</el-main>
 	</el-container>
 

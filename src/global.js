@@ -4,14 +4,14 @@ import tool from './utils/tool'
 import http from "./utils/request"
 import { permission, rolePermission } from './utils/permission'
 
-import scTable from './components/hlTable/index.vue'
-import scTableColumn from './components/hlTable/column.js'
+import hlTable from './components/hlTable/index.vue'
+import hlTableColumn from './components/hlTable/column.js'
 import scFilterBar from './components/hlFilterBar/index'
 import scUpload from './components/hlUpload'
 import scUploadMultiple from './components/hlUpload/multiple'
 import scUploadFile from './components/hlUpload/file'
 import scFormTable from './components/hlFormTable'
-import scTableSelect from './components/hlTableSelect'
+import hlTableSelect from './components/hlTableSelect'
 import scPageHeader from './components/hlPageHeader'
 import scSelect from './components/hlSelect'
 import scDialog from './components/hlDialog'
@@ -45,14 +45,14 @@ export default {
 		app.config.globalProperties.$ROLE = rolePermission;
 
 		//注册全局组件
-		app.component('hlTable', scTable);
-		app.component('hlTableColumn', scTableColumn);
+		app.component('hlTable', hlTable);
+		app.component('hlTableColumn', hlTableColumn);
 		app.component('hlFilterBar', scFilterBar);
 		app.component('hlUpload', scUpload);
 		app.component('hlUploadMultiple', scUploadMultiple);
 		app.component('hlUploadFile', scUploadFile);
 		app.component('hlFormTable', scFormTable);
-		app.component('hlTableSelect', scTableSelect);
+		app.component('hlTableSelect', hlTableSelect);
 		app.component('hlPageHeader', scPageHeader);
 		app.component('hlSelect', scSelect);
 		app.component('hlDialog', scDialog);

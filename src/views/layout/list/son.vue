@@ -9,7 +9,7 @@
 					</div>
 				</el-header>
 				<el-main class="nopadding">
-					<scTable ref="table" :apiObj="list.apiObj" row-key="id" stripe highlightCurrentRow @row-click="rowClick">
+					<hlTable ref="table" :apiObj="list.apiObj" row-key="id" stripe highlightCurrentRow @row-click="rowClick">
 						<el-table-column type="selection" width="50"></el-table-column>
 						<el-table-column label="ID" prop="id" width="200"></el-table-column>
 						<el-table-column label="评分" prop="num" width="80"></el-table-column>
@@ -19,7 +19,7 @@
 							</template>
 						</el-table-column>
 						<el-table-column label="创建日期" prop="datetime" width="150" sortable></el-table-column>
-					</scTable>
+					</hlTable>
 				</el-main>
 			</el-container>
 		</el-aside>
@@ -31,7 +31,7 @@
 				</div>
 			</el-header>
 			<el-main class="nopadding">
-				<scTable ref="sontable" :apiObj="list.apiObj" row-key="id" stripe>
+				<hlTable ref="sontable" :apiObj="list.apiObj" row-key="id" stripe>
 					<el-table-column type="selection" width="50"></el-table-column>
 					<el-table-column label="姓名" prop="name" width="180"></el-table-column>
 					<el-table-column label="状态" prop="type" width="60">
@@ -43,7 +43,7 @@
 					<el-table-column label="邮箱" prop="email" width="250"></el-table-column>
 					<el-table-column label="评分" prop="num" width="150"></el-table-column>
 					<el-table-column label="注册时间" prop="datetime" width="150" sortable></el-table-column>
-				</scTable>
+				</hlTable>
 			</el-main>
 		</el-container>
 	</el-container>

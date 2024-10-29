@@ -19,7 +19,7 @@
 						<scEcharts height="100%" :option="logsChartOption"></scEcharts>
 					</el-header>
 					<el-main class="nopadding">
-						<scTable ref="table" :apiObj="apiObj" stripe highlightCurrentRow @row-click="rowClick">
+						<hlTable ref="table" :apiObj="apiObj" stripe highlightCurrentRow @row-click="rowClick">
 							<el-table-column label="级别" prop="level" width="60">
 								<template #default="scope">
 									<el-icon v-if="scope.row.level=='error'" style="color: #F56C6C;"><el-icon-circle-close-filled /></el-icon>
@@ -34,7 +34,7 @@
 							<el-table-column label="员工" prop="user" width="150"></el-table-column>
 							<el-table-column label="客户端IP" prop="cip" width="150"></el-table-column>
 							<el-table-column label="日志时间" prop="time" width="170"></el-table-column>
-						</scTable>
+						</hlTable>
 					</el-main>
 				</el-container>
 			</el-main>

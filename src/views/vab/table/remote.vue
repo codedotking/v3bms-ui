@@ -10,7 +10,7 @@
 			</div>
 		</el-header>
 		<el-main class="nopadding">
-			<scTable ref="table" :apiObj="list.apiObj" row-key="id" stripe show-summary remoteSort remoteFilter remoteSummary>
+			<hlTable ref="table" :apiObj="list.apiObj" row-key="id" stripe show-summary remoteSort remoteFilter remoteSummary>
 				<el-table-column type="selection" width="50"></el-table-column>
 				<el-table-column label="姓名" prop="name" width="150"></el-table-column>
 				<el-table-column label="性别" prop="sex" width="150" column-key="sex" :filters="sexFilters"></el-table-column>
@@ -18,7 +18,7 @@
 				<el-table-column label="评分" prop="num" width="150" sortable='custom'></el-table-column>
 				<el-table-column label="进度" prop="progress" width="250" sortable></el-table-column>
 				<el-table-column label="注册时间" prop="datetime" width="150" sortable='custom'></el-table-column>
-			</scTable>
+			</hlTable>
 		</el-main>
 	</el-container>
 </template>

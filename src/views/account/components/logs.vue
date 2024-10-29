@@ -1,6 +1,6 @@
 <template>
 	<el-card shadow="never" header="近7天操作记录">
-		<scTable ref="table" :data="data" height="auto" paginationLayout="total, prev, pager, next" hideDo>
+		<hlTable ref="table" :data="data" height="auto" paginationLayout="total, prev, pager, next" hideDo>
 			<hl-table-column label="序号" type="index"></hl-table-column>
 			<hl-table-column label="业务名称" prop="title" min-width="240"></hl-table-column>
 			<hl-table-column label="IP" prop="ip" width="150"></hl-table-column>
@@ -9,7 +9,7 @@
 			</hl-table-column>
 			<hl-table-column label="操作时间" prop="time" width="150"></hl-table-column>
 
-		</scTable>
+		</hlTable>
 	</el-card>
 </template>
 
